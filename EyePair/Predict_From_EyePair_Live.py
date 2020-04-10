@@ -16,9 +16,7 @@ def find_eye_pair_from_image(image):
 model = models.load_model('test.h5')
 
 def predict_eye_pair_from_image(picture):
-    if(np.sum(picture == 0)):
-        im = Image.fromarray(picture, 'RGB')
-    im = picture
+    im = Image.fromarray(picture, 'RGB')
     im = im.resize((64,64))
     img_array = np.array(im)
     img_array = np.expand_dims(img_array, axis=0)
