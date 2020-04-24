@@ -80,7 +80,7 @@ def main():
 			cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 0, 0), 2)
 
 		#Open the Camera Stream.
-		cv2.imshow('blinks counter', frame)
+		cv2.imshow('Drowsiness Detection', frame)
 
 		#Unpack the variable 'state' by using the Extract_and_Predict function on the Camera frame.
 		state = Extract_and_Predict_Eyes(frame)
