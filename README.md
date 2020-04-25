@@ -22,7 +22,12 @@ Here is how you can run the Drowsiness Detector on your computer.
 2. python3 Drowsiness_Detector.py
 
 Here are some images of the detector running (I ran on a Raspberry Pi 4).
-(Insert images)
+![](example_images/Awake.png)
+Here we see that in the top left corner we have two pieces of text. "State" and "Drowsiness Alert". "State" means the state of the eyes at the current moment. Right now, the eyes are open, so next to "State" shows "Open". "Drowsiness Alert" is the Drowsiness Alert, right now it says "False" which means there is no Drowsiness Alert.
+![](example_images/Closed.png)
+Here, the eyes are closed, so next to "State", it says "Close". However, in this image, I just closed my eyes. That does not mean I am drowsy, as it is only 1 frame. So that is why the "Drowsiness Alert" is still False. 
+![](example_images/Drowsiness_Alert.png)
+At this time, I have closed my eyes and have kept them closed for quite some time. So now, along with the "State" being "Close", it says "Drowsiness Alert: Closed Eyes". This means that my eyes have been closed for more than 50 frames (threshold for consecutive closed eye frames), so the Drowsiness Alert will pop up.
 
 Now you have ran the code!
 
