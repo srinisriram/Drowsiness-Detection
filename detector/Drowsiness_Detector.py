@@ -9,7 +9,7 @@ from CNN_Preprocess import cnnPreprocess
 from Variables import drowsy_counter, state, wake_up, max_closed_eyes
 
 #Load the CNN
-model = load_model('models/blinkModel.h5')
+model = load_model('models/drowsy_detectionModel.h5')
 
 def Extract_and_Predict_Eyes(frame):
 	"""
