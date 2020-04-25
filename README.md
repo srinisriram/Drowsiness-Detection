@@ -78,5 +78,3 @@ model.fit_generator(train_dir,batch_size=32),
 
 
 
-
-
