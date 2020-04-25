@@ -14,8 +14,9 @@ These are the packages you will need to install for Python3 for the Detector to 
 
 ### Clone the Repository:
 Use this command to clone the repository.
+```
 git clone https://github.com/srinisriram/Drowsiness-Detection.git
-
+```
 ### Run the Code:
 Here is how you can run the Drowsiness Detector on your computer.
 1. cd Drowsiness-Detection/detector
@@ -23,7 +24,7 @@ Here is how you can run the Drowsiness Detector on your computer.
 
 Here are some images of the detector running (I ran on a Raspberry Pi 4).
 ![](example_images/Awake.png)
-Here we see that in the top left corner we have two pieces of text. "State" and "Drowsiness Alert". "State" means the state of the eyes at the current moment. Right now, the eyes are open, so next to "State" shows "Open". "Drowsiness Alert" is the Drowsiness Alert, right now it says "False" which means there is no Drowsiness Alert.
+Here we see that in the top right corner we have two pieces of text. "State" and "Drowsiness Alert". "State" means the state of the eyes at the current moment. Right now, the eyes are open, so next to "State" shows "Open". "Drowsiness Alert" is the Drowsiness Alert, right now it says "False" which means there is no Drowsiness Alert.
 ![](example_images/Closed.png)
 Here, the eyes are closed, so next to "State", it says "Close". However, in this image, I just closed my eyes. That does not mean I am drowsy, as it is only 1 frame. So that is why the "Drowsiness Alert" is still False. 
 ![](example_images/Drowsiness_Alert.png)
