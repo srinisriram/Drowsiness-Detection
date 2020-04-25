@@ -42,6 +42,15 @@ If you want to understand the code, you can read each of the files that are prov
 
 The dataset I used to train the model was the Closed Eyes in the Wild dataset. Here is the link: http://parnec.nuaa.edu.cn/xtan/data/ClosedEyeDatabases.html
 
+Here are the Python3 Packages that you need to import for the code to run:
+```
+import keras
+from keras.models import Sequential
+from keras.layers import Conv2D,Flatten,Dense,Activation,Dropout,MaxPooling2D
+from keras.activations import relu
+from keras.optimizers import Adam
+```
+
 To build the CNN, I used this code:
 ```
 model = Sequential()
