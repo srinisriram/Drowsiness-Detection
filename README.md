@@ -28,7 +28,7 @@ Here we see that in the top right corner we have two pieces of text. "State" and
 ![](example_images/Closed.png)
 Here, the eyes are closed, so next to "State", it says "Close". However, in this image, I just closed my eyes. That does not mean I am drowsy, as it is only 1 frame. So that is why the "Drowsiness Alert" is still False. 
 ![](example_images/Drowsiness_Alert.png)
-At this time, I have closed my eyes and have kept them closed for quite some time. So now, along with the "State" being "Close", it says "Drowsiness Alert: Closed Eyes". This means that my eyes have been closed for more than 50 frames (threshold for consecutive closed eye frames), so the Drowsiness Alert will pop up.
+At this time, I have closed my eyes and have kept them closed for quite some time. So now, along with the "State" being "Close", it says "Drowsiness Alert: Closed Eyes". This means that my eyes have been closed for more than 5 frames (threshold for consecutive closed eye frames), so the Drowsiness Alert will pop up.
 
 Now you have ran the code!
 
