@@ -7,6 +7,9 @@ from imutils import face_utils
 from Crop_Eyes import cropEyes
 from CNN_Preprocess import cnnPreprocess
 from Variables import drowsy_counter, state, wake_up, max_closed_eyes
+import os
+
+os.environ['KMP_DUPLICATE_LIB_OK']='True'
 
 #Load the CNN
 model = load_model('models/drowsy_detectionModel.h5')
