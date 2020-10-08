@@ -15,7 +15,7 @@ os.environ['KMP_DUPLICATE_LIB_OK']='True'
 #Load the CNN
 model = load_model('models/drowsy_detectionModel.h5')
 
-filename = 'alarm.wav'
+filename = 'Alarm2.wav'
 wave_obj = sa.WaveObject.from_wave_file(filename)
 
 def Extract_and_Predict_Eyes(frame):
