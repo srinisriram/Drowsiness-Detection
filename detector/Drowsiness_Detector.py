@@ -8,11 +8,15 @@ from Crop_Eyes import cropEyes
 from CNN_Preprocess import cnnPreprocess
 from Variables import drowsy_counter, state, wake_up, max_closed_eyes
 import os
+import simpleaudio as sa
 
 os.environ['KMP_DUPLICATE_LIB_OK']='True'
 
 #Load the CNN
 model = load_model('models/drowsy_detectionModel.h5')
+
+filename = 'alarm.wav'
+wave_obj = sa.WaveObject.from_wave_file(filename)
 
 def Extract_and_Predict_Eyes(frame):
 	"""
@@ -80,7 +84,7 @@ def main():
 		cv2.putText(frame, "State: {}".format(state), (300, 30),
 			cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
 		cv2.putText(frame, "Drowsiness Alert: {}".format(wake_up), (300, 60),
-			cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 0, 0), 2)
+			cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
 
 		#Open the Camera Stream.
 		cv2.imshow('Drowsiness Detection', frame)
@@ -98,6 +102,9 @@ def main():
 		#If the drowsy_counter exceeds the threshold for consecutive closed eye frames(defined in Variables.py), then we set the Drowsiness Alert to be 'Closed Eyes'
 		if drowsy_counter > max_closed_eyes:
 			wake_up = "Closed Eyes"
+			play_obj = wave_obj.play()
+			play_obj.wait_done()
+
 
 
 		key = cv2.waitKey(1) & 0xFF
