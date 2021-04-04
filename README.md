@@ -1,5 +1,11 @@
 # Drowsiness Detection
 Detects if a person is "Drowsy" by using a Keras CNN Image Classifier that I trained. This project was made to learn how CNN's work, how to train your own CNN Classifier, and how to implement your CNN Classifier in real time using Computer Vision. 
+
+## Collaborators
+<a href="https://github.com/srinisriram/Drowsiness-Detection/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=srinisriram/Drowsiness-Detection" />
+</a>
+
 ## Getting Started:
 
 ### Prerequisites:
